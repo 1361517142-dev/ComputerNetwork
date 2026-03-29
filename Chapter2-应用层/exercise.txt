@@ -1,0 +1,23 @@
+P4:
+    a:http://gaia.cs.umass.edu/cs453/index.html //请求资源的URL = 协议http + 服务器主机名 + 路径，自HTTP1.1后，请求行的URL可只写路径，由Host首部行判断主机名
+    b:HTTP/1.1
+    c:Connection: keep-alive持续连接，且Keep-Alive: 300持续300秒
+    d:!!!HTTP报文无法判断用户端主机的ip地址！该信息被封装在网络层中
+    e:Mozilla/5.0
+
+P5：
+    a:能找到(200 OK)，Date:Tue, 07 Mar 2008 12:39:45
+    b:Last-Modified: Sat, 10 Dec2005 18:27:46
+    c:Content-Length:3874
+    d:前五个字节[<!doc]，运行但最多100s
+
+P7:
+    求和RTTi(1 <= i <= n) + 2 * RTT0
+
+P8:
+    a:求和 + 18 * RTT0
+    b:求和 + 6 * RTT0
+    c:(带流水线的HTTP) 求和 + 3 * RTT0
+    //1.浏览器必须先接收到web网页，才能向服务器请求该网页引用的对象（因为浏览器一开始只知道URL，不知道这个URL的具体内容，等拿到返回的HTML代码后，才知道还有对象需要下载）
+    //2.带流水线的HTTP，运行浏览器一次请求多个对象
+
